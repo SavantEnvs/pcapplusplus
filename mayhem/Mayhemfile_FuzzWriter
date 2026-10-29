@@ -1,0 +1,9 @@
+project: savantenvs/pcapplusplus
+target: FuzzWriter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/FuzzWriter/testsuite
+cmds:
+  - cmd: /mayhem/FuzzWriter
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/pcapplusplus
+target: FuzzTargetSnoop
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/FuzzTargetSnoop/testsuite
+cmds:
+  - cmd: /mayhem/FuzzTargetSnoop
+    libfuzzer: true
+    timeout: 5

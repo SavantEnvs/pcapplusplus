@@ -1,0 +1,6 @@
+# Prune the build context. .git is deliberately kept (full history is baked into /mayhem).
+# build.sh recreates build/ inside the image, so a stale local tree must not be copied in.
+build/
+cmake-build-*/
+.vscode/
+.idea/
